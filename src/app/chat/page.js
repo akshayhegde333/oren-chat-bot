@@ -66,32 +66,11 @@ export default function ChatPage() {
     };
 
     return (
-        <div className="flex flex-col h-screen max-w-3xl mx-auto p-4">
-            {/* Header */}
-            <header className="border-b pb-4 mb-4">
-                <div className="flex justify-between items-center">
-                    <Link href="/" className="text-blue-500 hover:text-blue-700">
-                        ← Back to Home
-                    </Link>
-                    <h1 className="text-xl font-bold">Oren Support Chat</h1>
-                </div>
-            </header>
-
-            {/* Display any errors */}
-            {error && (
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                    <p>Error: {error}</p>
-                </div>
-            )}
+        <div className="flex flex-col h-screen max-w-3xl mx-auto p-4 ">
 
             {/* Chat Messages */}
             <div className="flex-1 overflow-y-auto mb-4 space-y-4">
-                {messages.length === 0 ? (
-                    <div className="text-center text-gray-500 mt-10">
-                        <p>Hi there! I'm your Oren assistant.</p>
-                        <p>How can I help you today?</p>
-                    </div>
-                ) : (
+                {
                     messages.map((m, index) => (
                         <div
                             key={index}
@@ -106,7 +85,7 @@ export default function ChatPage() {
                             <div className="mt-1">{m.content}</div>
                         </div>
                     ))
-                )}
+                }
                 {isLoading && (
                     <div className="bg-gray-100 p-4 rounded-lg mr-auto max-w-[80%]">
                         <div className="font-bold">Assistant</div>

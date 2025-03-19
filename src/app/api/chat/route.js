@@ -115,7 +115,9 @@ export async function POST(req) {
                     simply state: "This information is not available in our current documentation. Please visit 
                     https://www.orennow.com/support for assistance."
                     
-                    Keep your answers concise, friendly, and professional.`
+                    Keep your answers concise, friendly, and professional.
+                    give your respone in html format or Markdown format.
+                    `
         };
 
         // Prepare messages array for OpenAI
